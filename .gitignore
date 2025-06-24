@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+.env
+src/config/config.json 
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+logs/**/*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Optional: Sequelize CLI folders (if you don't want to commit them)
+*.sqlite
+*.sqlite3
+
+# VSCode
+.vscode/
+
+# Build
+dist/
+build/
+
+# Git
+.git/
