@@ -20,7 +20,7 @@ class UserService {
 
     async SignIn(email, plainPassword) {
         try {
-            const user = await this.userRepository.findByEmail(email);
+            const user = await this.userRepository.getByEmail(email);
             const passwordMatch = await this.checkPassword(plainPassword, user.password);
 
             if(!passwordMatch){
@@ -66,7 +66,7 @@ class UserService {
                 throw new Error('Unauthorized');
             }
 
-            const user = await this.userRepository.findById(response.id);
+            const user = await this.userRepository.getById(response.id);
             if(!user) {
                 console.error('User not found for token:', response.id);
                 throw new Error('Unauthorized');
